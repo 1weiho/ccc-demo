@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0631B32A2B6A1D0010BE25 /* CampTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0631B22A2B6A1D0010BE25 /* CampTutorialView.swift */; };
 		EE799C582A2A5E280084523C /* ccc_demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE799C572A2A5E280084523C /* ccc_demoApp.swift */; };
 		EE799C5A2A2A5E280084523C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE799C592A2A5E280084523C /* ContentView.swift */; };
 		EE799C5C2A2A5E290084523C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE799C5B2A2A5E290084523C /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D0631B22A2B6A1D0010BE25 /* CampTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampTutorialView.swift; sourceTree = "<group>"; };
 		EE799C542A2A5E280084523C /* ccc-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccc-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE799C572A2A5E280084523C /* ccc_demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccc_demoApp.swift; sourceTree = "<group>"; };
 		EE799C592A2A5E280084523C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				EE799C592A2A5E280084523C /* ContentView.swift */,
 				EE799C5B2A2A5E290084523C /* Assets.xcassets */,
 				EE799C5D2A2A5E290084523C /* Preview Content */,
+				2D0631B22A2B6A1D0010BE25 /* CampTutorialView.swift */,
 			);
 			path = "ccc-demo";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE799C5A2A2A5E280084523C /* ContentView.swift in Sources */,
+				2D0631B32A2B6A1D0010BE25 /* CampTutorialView.swift in Sources */,
 				EE799C582A2A5E280084523C /* ccc_demoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
