@@ -23,7 +23,9 @@ struct CampTutorialView: View {
             // Rest of your content
             CampTutorialSearchBarView(searchText: $searchText)
             
-            CampTutorialTabSelectionView(selectedTab: $selectedTab).padding(.top, 12)
+            CampTutorialTabSelectionView(selectedTab: $selectedTab)
+                .padding(.top, 12)
+                .padding(.trailing, -32)
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 28) {
@@ -142,7 +144,7 @@ struct CampTutorialTabButton: View {
                         .padding(.bottom, 18)
                 }
                 Spacer()
-            }.frame(width: 120)
+            }.frame(width: 112)
                 .background(isSelected ? Color.primaryColor : Color.gray2)
                 .cornerRadius(18)
         }.kerning(4)
