@@ -11,7 +11,7 @@ import SwiftUI
 struct ccc_demoApp: App {
     var body: some Scene {
         WindowGroup {
-            CreatePostView()
+            ContentView()
         }
     }
 }
