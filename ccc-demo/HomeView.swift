@@ -201,7 +201,7 @@ struct Post: View {
             .padding(.bottom, 8)
             
             Text("最佳露營目的地分享！")
-                .font(.title2)
+                .font(.title3)
                 .bold()
                 .kerning(4)
                 .padding(.bottom, 8)
