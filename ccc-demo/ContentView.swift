@@ -7,150 +7,62 @@
 
 import SwiftUI
 
-extension Color {
-    static let gray1 = Color(red: 0.4, green: 0.4, blue: 0.4)
-    static let gray2 = Color(red: 0.851, green: 0.851, blue: 0.851)
-}
-
 struct ContentView: View {
-    @State private var searchText = ""
     @State private var selectedTab = 0
     
     var body: some View {
         
-        VStack() {
-            // Top Area
-            TopAreaView(title: "小明，您好！")
-            
-            // Rest of your content
-            SearchBarView(searchText: $searchText)
-            
-            TabSelectionView(selectedTab: $selectedTab).padding(.top, 12)
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 28) {
-                    CampusPost()
-                    CampusPost()
-                    CampusPost()
+        TabView(selection: $selectedTab) {
+            HomeView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "globe")
+                        Text("探索")
+                    }
+                    
                 }
-                .padding(.top)
-            }
+                .tag(0)
             
+            MatchPartnerView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "bolt.heart")
+                        Text("配對")
+                    }
+                }
+                .tag(1)
             
-            
-        }.padding(.top, 20).padding(.horizontal, 32)
-    }
-}
-
-struct TopAreaView: View {
-    var title: String
-    var body: some View {
-        HStack {
-            // User Name
-            Text(title)
-                .font(.title)
-                .bold()
-                .kerning(4)
-            
-            
-            Spacer()
-            
-            // User Image
-            Image("avatar")
-                .resizable()
-                .frame(width: 48, height: 48)
-                .clipShape(Circle())
-            
+            CreatePostView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "plus")
+                        Text("建立")
+                    }
+                }
+                .tag(2)
+            CampTutorialView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "house")
+                        Text("教學")
+                    }
+                }
+                .tag(3)
+            Text("Profile")
+                .tabItem {
+                    VStack {
+                        Image(systemName: "person")
+                        Text("個人")
+                    }
+                }
+                .tag(4)
+        }.accentColor(.uiPrimary).onAppear {
+            UITabBar.appearance().barTintColor = .white
+            UITabBar.appearance().unselectedItemTintColor = .gray
         }
-    }
-}
-
-
-struct SearchBarView: View {
-    @Binding var searchText: String
-    
-    var body: some View {
-        HStack {
-            Image(systemName: "magnifyingglass")
-                .foregroundColor(.gray2)
-                .padding(.leading, 8)
-            
-            TextField("尋找營地？", text: $searchText)
-                .padding(.vertical, 8)
-                .padding(.horizontal, 4)
-                .kerning(4)
-                .foregroundColor(.black)
-                .background(Color.white)
-            
-            Image(systemName: "slider.horizontal.3")
-                .foregroundColor(.black)
-                .padding(.trailing, 8)
-        }
-        .padding(.horizontal)
-        .padding(.vertical, 6)
-        .overlay(
-            RoundedRectangle(cornerRadius: 26)
-                .stroke(Color.gray2, lineWidth: 1)
-        )
-    }
-}
-
-struct TabSelectionView: View {
-    @Binding var selectedTab: Int
-    
-    var body: some View {
-        HStack(spacing: 16) {
-            TabButton(imageName: "house", text: "營地", isSelected: selectedTab == 0) {
-                selectedTab = 0
-            }
-            
-            
-            TabButton(imageName: "heart", text: "貼文", isSelected: selectedTab == 1) {
-                selectedTab = 1
-            }
-            Spacer()
-        }
-    }
-}
-
-struct TabButton: View {
-    let imageName: String
-    let text: String
-    let isSelected: Bool
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            HStack {
-                Image(systemName: imageName)
-                    .foregroundColor(isSelected ? .black : .gray2)
-                
-                Text(text)
-                    .foregroundColor(isSelected ? .black : .gray2)
-            }
-        }.kerning(4)
-            .font(.callout)
-    }
-}
-
-struct CampusPost: View {
-    var body: some View {
-        VStack(alignment: .leading) {
-            Image("campus")
-                .resizable()
-                .frame(maxWidth: .infinity)
-                .cornerRadius(16)
-                .padding(.bottom, 6)
-            Text("久良栖露營區")
-                .foregroundColor(.black)
-                .font(.title3)
-                .kerning(2)
-            Text("台中市和平區東關路1段360之5號")
-                .foregroundColor(.gray1)
-                .font(.callout)
-                .kerning(1)
-            
-        }
+        
+        
+        
     }
 }
 

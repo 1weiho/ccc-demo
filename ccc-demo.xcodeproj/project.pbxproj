@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D0631B32A2B6A1D0010BE25 /* CampTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0631B22A2B6A1D0010BE25 /* CampTutorialView.swift */; };
+		EE415A842A2E47C500510C40 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415A832A2E47C500510C40 /* HomeView.swift */; };
 		2D3A12662A2F39570075F01A /* MatchPartnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3A12652A2F39570075F01A /* MatchPartnerView.swift */; };
 		EE415A802A2E3C6000510C40 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415A7F2A2E3C6000510C40 /* CreatePostView.swift */; };
 		EE799C582A2A5E280084523C /* ccc_demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE799C572A2A5E280084523C /* ccc_demoApp.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		2D0631B22A2B6A1D0010BE25 /* CampTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampTutorialView.swift; sourceTree = "<group>"; };
+		EE415A832A2E47C500510C40 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2D3A12652A2F39570075F01A /* MatchPartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPartnerView.swift; sourceTree = "<group>"; };
 		EE415A7F2A2E3C6000510C40 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		EE799C542A2A5E280084523C /* ccc-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccc-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 				EE799C5B2A2A5E290084523C /* Assets.xcassets */,
 				EE799C5D2A2A5E290084523C /* Preview Content */,
 				2D0631B22A2B6A1D0010BE25 /* CampTutorialView.swift */,
+				EE415A832A2E47C500510C40 /* HomeView.swift */,
 				EE415A7F2A2E3C6000510C40 /* CreatePostView.swift */,
 				2D3A12652A2F39570075F01A /* MatchPartnerView.swift */,
 			);
@@ -268,6 +271,7 @@
 			files = (
 				EE415A802A2E3C6000510C40 /* CreatePostView.swift in Sources */,
 				EE799C5A2A2A5E280084523C /* ContentView.swift in Sources */,
+				EE415A842A2E47C500510C40 /* HomeView.swift in Sources */,
 				2D0631B32A2B6A1D0010BE25 /* CampTutorialView.swift in Sources */,
 				EE799C582A2A5E280084523C /* ccc_demoApp.swift in Sources */,
 				2D3A12662A2F39570075F01A /* MatchPartnerView.swift in Sources */,
