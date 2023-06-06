@@ -48,7 +48,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(3)
-            Text("Profile")
+            PersonalInfoView()
                 .tabItem {
                     VStack {
                         Image(systemName: "person")

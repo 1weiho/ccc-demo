@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2D0631B32A2B6A1D0010BE25 /* CampTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0631B22A2B6A1D0010BE25 /* CampTutorialView.swift */; };
-		EE415A842A2E47C500510C40 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415A832A2E47C500510C40 /* HomeView.swift */; };
 		2D3A12662A2F39570075F01A /* MatchPartnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3A12652A2F39570075F01A /* MatchPartnerView.swift */; };
 		EE415A802A2E3C6000510C40 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415A7F2A2E3C6000510C40 /* CreatePostView.swift */; };
+		EE415A842A2E47C500510C40 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415A832A2E47C500510C40 /* HomeView.swift */; };
 		EE799C582A2A5E280084523C /* ccc_demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE799C572A2A5E280084523C /* ccc_demoApp.swift */; };
 		EE799C5A2A2A5E280084523C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE799C592A2A5E280084523C /* ContentView.swift */; };
 		EE799C5C2A2A5E290084523C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE799C5B2A2A5E290084523C /* Assets.xcassets */; };
@@ -18,6 +18,7 @@
 		EE799C692A2A5E2A0084523C /* ccc_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE799C682A2A5E2A0084523C /* ccc_demoTests.swift */; };
 		EE799C732A2A5E2A0084523C /* ccc_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE799C722A2A5E2A0084523C /* ccc_demoUITests.swift */; };
 		EE799C752A2A5E2A0084523C /* ccc_demoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE799C742A2A5E2A0084523C /* ccc_demoUITestsLaunchTests.swift */; };
+		EE96DD6C2A2F685400EEFFEE /* PersonalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE96DD6B2A2F685400EEFFEE /* PersonalInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +40,9 @@
 
 /* Begin PBXFileReference section */
 		2D0631B22A2B6A1D0010BE25 /* CampTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampTutorialView.swift; sourceTree = "<group>"; };
-		EE415A832A2E47C500510C40 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2D3A12652A2F39570075F01A /* MatchPartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPartnerView.swift; sourceTree = "<group>"; };
 		EE415A7F2A2E3C6000510C40 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		EE415A832A2E47C500510C40 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EE799C542A2A5E280084523C /* ccc-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccc-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE799C572A2A5E280084523C /* ccc_demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccc_demoApp.swift; sourceTree = "<group>"; };
 		EE799C592A2A5E280084523C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		EE799C6E2A2A5E2A0084523C /* ccc-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ccc-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE799C722A2A5E2A0084523C /* ccc_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccc_demoUITests.swift; sourceTree = "<group>"; };
 		EE799C742A2A5E2A0084523C /* ccc_demoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccc_demoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE96DD6B2A2F685400EEFFEE /* PersonalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				EE415A832A2E47C500510C40 /* HomeView.swift */,
 				EE415A7F2A2E3C6000510C40 /* CreatePostView.swift */,
 				2D3A12652A2F39570075F01A /* MatchPartnerView.swift */,
+				EE96DD6B2A2F685400EEFFEE /* PersonalInfoView.swift */,
 			);
 			path = "ccc-demo";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				EE415A802A2E3C6000510C40 /* CreatePostView.swift in Sources */,
 				EE799C5A2A2A5E280084523C /* ContentView.swift in Sources */,
 				EE415A842A2E47C500510C40 /* HomeView.swift in Sources */,
+				EE96DD6C2A2F685400EEFFEE /* PersonalInfoView.swift in Sources */,
 				2D0631B32A2B6A1D0010BE25 /* CampTutorialView.swift in Sources */,
 				EE799C582A2A5E280084523C /* ccc_demoApp.swift in Sources */,
 				2D3A12662A2F39570075F01A /* MatchPartnerView.swift in Sources */,
