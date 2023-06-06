@@ -21,7 +21,7 @@ struct HomeView: View {
         
         VStack() {
             // Top Area
-            TopAreaView()
+            TopAreaView(title: "小明，您好！")
             
             // Rest of your content
             SearchBarView(searchText: $searchText)
@@ -44,10 +44,11 @@ struct HomeView: View {
 }
 
 struct TopAreaView: View {
+    var title: String
     var body: some View {
         HStack {
             // User Name
-            Text("小明，您好！")
+            Text(title)
                 .font(.title)
                 .bold()
                 .kerning(4)
