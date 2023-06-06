@@ -33,9 +33,9 @@ struct HomeView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 28) {
                         if (selectedTab == 0) {
-                            CampusPost()
-                            CampusPost()
-                            CampusPost()
+                            CampusPost(campusImage: "campus", campusName: "久良栖露營區", campusAddress: "台中市和平區東關路1段360之5號")
+                            CampusPost(campusImage: "campus2", campusName: "靜觀露營區", campusAddress: "新竹縣五峰鄉桃山村18鄰311-30號")
+                            CampusPost(campusImage: "campus3", campusName: "彩虹喬露營區", campusAddress: "新竹縣尖石鄉義興村2鄰59-3號")
                         } else {
                             NavigationLink {
                                 PostView()
@@ -159,18 +159,21 @@ struct TabButton: View {
 }
 
 struct CampusPost: View {
+    let campusImage: String
+    let campusName: String
+    let campusAddress: String
     var body: some View {
         VStack(alignment: .leading) {
-            Image("campus")
+            Image(campusImage)
                 .resizable()
-                .frame(maxWidth: .infinity)
+                .frame(width: 350, height: 350)
                 .cornerRadius(16)
                 .padding(.bottom, 6)
-            Text("久良栖露營區")
+            Text(campusName)
                 .foregroundColor(.black)
                 .font(.title3)
                 .kerning(2)
-            Text("台中市和平區東關路1段360之5號")
+            Text(campusAddress)
                 .foregroundColor(.gray1)
                 .font(.callout)
                 .kerning(1)
