@@ -20,35 +20,50 @@ struct HomeView: View {
     @State private var selectedTab = 0
     
     var body: some View {
-        
-        VStack() {
-            // Top Area
-            TopAreaView(title: "小明，您好！")
-            
-            // Rest of your content
-            SearchBarView(searchText: $searchText)
-            
-            TabSelectionView(selectedTab: $selectedTab).padding(.top, 12)
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 28) {
-                    if (selectedTab == 0) {
-                        CampusPost()
-                        CampusPost()
-                        CampusPost()
-                    } else {
-                        Post(likeCount: 10)
-                        Post(likeCount: 23)
-                        Post(likeCount: 5)
+        NavigationView() {
+            VStack() {
+                // Top Area
+                TopAreaView(title: "小明，您好！")
+                
+                // Rest of your content
+                SearchBarView(searchText: $searchText)
+                
+                TabSelectionView(selectedTab: $selectedTab).padding(.top, 12)
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 28) {
+                        if (selectedTab == 0) {
+                            CampusPost()
+                            CampusPost()
+                            CampusPost()
+                        } else {
+                            NavigationLink {
+                                PostView()
+                            } label: {
+                                Post(likeCount: 10)
+                            }.buttonStyle(PlainButtonStyle())
+                            NavigationLink {
+                                PostView()
+                            } label: {
+                                Post(likeCount: 23)
+                            }.buttonStyle(PlainButtonStyle())
+                            NavigationLink {
+                                PostView()
+                            } label: {
+                                Post(likeCount: 15)
+                            }.buttonStyle(PlainButtonStyle())
+                            NavigationLink {
+                                PostView()
+                            } label: {
+                                Post(likeCount: 5)
+                            }.buttonStyle(PlainButtonStyle())
+                        }
+                        
                     }
-                    
+                    .padding(.vertical)
                 }
-                .padding(.vertical)
-            }
-            
-            
-            
-        }.padding(.top, 20).padding(.horizontal, 32)
+            }.padding(.top, 20).padding(.horizontal, 32)
+        }
     }
 }
 
