@@ -15,32 +15,51 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             HomeView()
                 .tabItem {
-                    Image(systemName: "globe")
+                    VStack {
+                        Image(systemName: "globe")
+                        Text("探索")
+                    }
+                    
                 }
                 .tag(0)
             
-            Text("Explore")
+            Text("Find Friend")
                 .tabItem {
-                    Image(systemName: "bolt.heart")
+                    VStack {
+                        Image(systemName: "bolt.heart")
+                        Text("配對")
+                    }
                 }
                 .tag(1)
             
-            Text("Profile")
+            CreatePostView()
                 .tabItem {
-                    Image(systemName: "plus.circle")
+                    VStack {
+                        Image(systemName: "plus")
+                        Text("建立")
+                    }
                 }
                 .tag(2)
             CampTutorialView()
                 .tabItem {
-                    Image(systemName: "house")
+                    VStack {
+                        Image(systemName: "house")
+                        Text("教學")
+                    }
                 }
                 .tag(3)
             Text("Profile")
                 .tabItem {
-                    Image(systemName: "person")
+                    VStack {
+                        Image(systemName: "person")
+                        Text("個人")
+                    }
                 }
                 .tag(4)
-        }.accentColor(.uiPrimary)
+        }.accentColor(.uiPrimary).onAppear {
+            UITabBar.appearance().barTintColor = .white
+            UITabBar.appearance().unselectedItemTintColor = .gray
+        }
         
         
         
