@@ -20,28 +20,50 @@ struct HomeView: View {
     @State private var selectedTab = 0
     
     var body: some View {
-        
-        VStack() {
-            // Top Area
-            TopAreaView(title: "小明，您好！")
-            
-            // Rest of your content
-            SearchBarView(searchText: $searchText)
-            
-            TabSelectionView(selectedTab: $selectedTab).padding(.top, 12)
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 28) {
-                    CampusPost()
-                    CampusPost()
-                    CampusPost()
+        NavigationView() {
+            VStack() {
+                // Top Area
+                TopAreaView(title: "小明，您好！")
+                
+                // Rest of your content
+                SearchBarView(searchText: $searchText)
+                
+                TabSelectionView(selectedTab: $selectedTab).padding(.top, 12)
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 28) {
+                        if (selectedTab == 0) {
+                            CampusPost()
+                            CampusPost()
+                            CampusPost()
+                        } else {
+                            NavigationLink {
+                                PostView()
+                            } label: {
+                                Post(likeCount: 10)
+                            }.buttonStyle(PlainButtonStyle())
+                            NavigationLink {
+                                PostView()
+                            } label: {
+                                Post(likeCount: 23)
+                            }.buttonStyle(PlainButtonStyle())
+                            NavigationLink {
+                                PostView()
+                            } label: {
+                                Post(likeCount: 15)
+                            }.buttonStyle(PlainButtonStyle())
+                            NavigationLink {
+                                PostView()
+                            } label: {
+                                Post(likeCount: 5)
+                            }.buttonStyle(PlainButtonStyle())
+                        }
+                        
+                    }
+                    .padding(.vertical)
                 }
-                .padding(.top)
-            }
-            
-            
-            
-        }.padding(.top, 20).padding(.horizontal, 32)
+            }.padding(.top, 20).padding(.horizontal, 32)
+        }
     }
 }
 
@@ -156,6 +178,59 @@ struct CampusPost: View {
         }
     }
 }
+
+struct Post: View {
+    @State private var isLiked = false
+    @State private var likeCount: Int
+    
+    init(likeCount: Int) {
+        self.likeCount = likeCount
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack(alignment: .center) {
+                Image("avatar")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+                Text("陳小春")
+                    .font(.title3)
+                    .kerning(2)
+            }
+            .padding(.bottom, 8)
+            
+            Text("最佳露營目的地分享！")
+                .font(.title3)
+                .bold()
+                .kerning(4)
+                .padding(.bottom, 8)
+            
+            Text("嗨，露營愛好者們！我們來到了一年一度的露營季節，這是我最期待的時刻之一。今天我們要來分享一些最佳露營目的地，讓你們可以探索大自然...")
+                .font(.body)
+                .foregroundColor(.dark)
+                .lineSpacing(6)
+                .kerning(2)
+                .padding(.bottom, 8)
+            
+            HStack {
+                Button(action: {
+                    if isLiked {
+                        likeCount -= 1
+                    } else {
+                        likeCount += 1
+                    }
+                    isLiked.toggle()
+                }) {
+                    Image(systemName: isLiked ? "heart.fill" : "heart").foregroundColor(isLiked ? Color.red : Color.black)
+                }
+                
+                Text("\(likeCount)")
+            }
+        }
+    }
+}
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

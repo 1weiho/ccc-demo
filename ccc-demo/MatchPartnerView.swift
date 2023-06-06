@@ -45,11 +45,19 @@ struct MatchPartnerView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 28) {
-                    MatchPartnerUserInfo(userImage: "littleSpring", userName: "陳小春", userText: "露營新手，渴望學習和分享。")
-                    MatchPartnerUserInfo(userImage: "littleSpring", userName: "張小婷", userText: "探險家，喜歡挑戰不同露營地點。")
-                    MatchPartnerUserInfo(userImage: "littleSpring", userName: "李美玲", userText: "露營美食家，熱衷於戶外料理。")
-                    MatchPartnerUserInfo(userImage: "littleSpring", userName: "王志明", userText: "野外攝影愛好者，追求自然風景的美麗。")
-                    MatchPartnerUserInfo(userImage: "littleSpring", userName: "林雅文", userText: "露營活動組織者，熱愛籌辦有趣的活動。")
+                    if (selectedTab == 0) {
+                        MatchPartnerUserInfo(userImage: "user1", userName: "陳小春", userText: "露營新手，渴望學習和分享。")
+                        MatchPartnerUserInfo(userImage: "user2", userName: "張小婷", userText: "探險家，喜歡挑戰不同露營地點。")
+                        MatchPartnerUserInfo(userImage: "user3", userName: "李美玲", userText: "露營美食家，熱衷於戶外料理。")
+                        MatchPartnerUserInfo(userImage: "user4", userName: "王志明", userText: "野外攝影愛好者，追求自然風景的美麗。")
+                        MatchPartnerUserInfo(userImage: "user5", userName: "林雅文", userText: "露營活動組織者，熱愛籌辦有趣的活動。")
+                    } else {
+                        MatchPartnerUserInfo(userImage: "user6", userName: "張靜儀", userText: "我熱愛大自然和戶外活動，尤其喜歡露營。")
+                        MatchPartnerUserInfo(userImage: "user7", userName: "陳宏偉", userText: "對於戶外生活有著極大的熱情。")
+                        MatchPartnerUserInfo(userImage: "user8", userName: "李美玲", userText: "我是一個熱愛戶外活動的人，特別喜歡露營。")
+                        MatchPartnerUserInfo(userImage: "user9", userName: "王俊傑", userText: "我對露營有著濃厚的興趣和熱愛，因為它讓我能夠離開城市的喧囂。")
+                        MatchPartnerUserInfo(userImage: "user10", userName: "林雅琪", userText: "每當我置身於森林或湖畔，我都感受到一種平靜和充電的感覺。")
+                    }
                 }
                 .padding(.top)
             }

@@ -32,7 +32,7 @@ struct CreatePostView: View {
                 .font(.title)
                 .bold()
                 .kerning(4)
-            TextField("敘述...", text: $inputContent)
+            TextField("敘述...", text: $inputContent, axis: .vertical)
                 .padding(.top, 10)
                 .foregroundColor(.gray1)
                 .font(.body)

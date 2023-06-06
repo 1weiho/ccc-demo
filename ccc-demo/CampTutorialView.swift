@@ -29,9 +29,9 @@ struct CampTutorialView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 28) {
-                    CampTutorialCampusPost()
-                    CampTutorialCampusPost()
-                    CampTutorialCampusPost()
+                    CampTutorialCampusPost(postTitle: "完美漢堡的燒烤指南", postPreview: "露營時享受美味的燒烤食物是一種令人愉悅的體驗。漢堡是露營者中常見且受歡迎的選擇之一。本文將分享一個簡單而美味的漢堡烹飪指南...")
+                    CampTutorialCampusPost(postTitle: "完美漢堡的燒烤指南", postPreview: "露營時享受美味的燒烤食物是一種令人愉悅的體驗。漢堡是露營者中常見且受歡迎的選擇之一。本文將分享一個簡單而美味的漢堡烹飪指南...")
+                    CampTutorialCampusPost(postTitle: "完美漢堡的燒烤指南", postPreview: "露營時享受美味的燒烤食物是一種令人愉悅的體驗。漢堡是露營者中常見且受歡迎的選擇之一。本文將分享一個簡單而美味的漢堡烹飪指南...")
                 }
                 .padding(.top)
             }
@@ -132,6 +132,10 @@ struct CampTutorialTabButton: View {
 }
 
 struct CampTutorialCampusPost: View {
+    
+    let postTitle: String
+    let postPreview: String
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -170,12 +174,12 @@ struct CampTutorialCampusPost: View {
                 .background(Color.primaryColor)
                 .cornerRadius(7)
             }
-            Text("完美漢堡的燒烤指南")
+            Text(postTitle)
                 .foregroundColor(.black)
                 .font(.title3)
                 .padding(.vertical, 4)
                 .kerning(2)
-            Text("露營時享受美味的燒烤食物是一種令人愉悅的體驗。漢堡是露營者中常見且受歡迎的選擇之一。本文將分享一個簡單而美味的漢堡烹飪指南...")
+            Text(postPreview)
                 .foregroundColor(.gray1)
                 .font(.callout)
                 .kerning(1.5)
