@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D0631B32A2B6A1D0010BE25 /* CampTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0631B22A2B6A1D0010BE25 /* CampTutorialView.swift */; };
 		2D3A12662A2F39570075F01A /* MatchPartnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3A12652A2F39570075F01A /* MatchPartnerView.swift */; };
+		2D538A9B2A2F827F00BAD5D1 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D538A9A2A2F827F00BAD5D1 /* PostView.swift */; };
 		EE415A802A2E3C6000510C40 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415A7F2A2E3C6000510C40 /* CreatePostView.swift */; };
 		EE415A842A2E47C500510C40 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE415A832A2E47C500510C40 /* HomeView.swift */; };
 		EE799C582A2A5E280084523C /* ccc_demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE799C572A2A5E280084523C /* ccc_demoApp.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		2D0631B22A2B6A1D0010BE25 /* CampTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampTutorialView.swift; sourceTree = "<group>"; };
 		2D3A12652A2F39570075F01A /* MatchPartnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPartnerView.swift; sourceTree = "<group>"; };
+		2D538A9A2A2F827F00BAD5D1 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		EE415A7F2A2E3C6000510C40 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		EE415A832A2E47C500510C40 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EE799C542A2A5E280084523C /* ccc-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ccc-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 				EE415A7F2A2E3C6000510C40 /* CreatePostView.swift */,
 				2D3A12652A2F39570075F01A /* MatchPartnerView.swift */,
 				EE96DD6B2A2F685400EEFFEE /* PersonalInfoView.swift */,
+				2D538A9A2A2F827F00BAD5D1 /* PostView.swift */,
 			);
 			path = "ccc-demo";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			files = (
 				EE415A802A2E3C6000510C40 /* CreatePostView.swift in Sources */,
 				EE799C5A2A2A5E280084523C /* ContentView.swift in Sources */,
+				2D538A9B2A2F827F00BAD5D1 /* PostView.swift in Sources */,
 				EE415A842A2E47C500510C40 /* HomeView.swift in Sources */,
 				EE96DD6C2A2F685400EEFFEE /* PersonalInfoView.swift in Sources */,
 				2D0631B32A2B6A1D0010BE25 /* CampTutorialView.swift in Sources */,
