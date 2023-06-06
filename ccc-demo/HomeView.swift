@@ -10,7 +10,9 @@ import SwiftUI
 extension Color {
     static let gray1 = Color(red: 0.4, green: 0.4, blue: 0.4)
     static let gray2 = Color(red: 0.851, green: 0.851, blue: 0.851)
+    static let light1 = Color(red: 0.962, green: 0.962, blue: 0.962)
     static let uiPrimary = Color(red: 0.418, green: 0.644, blue: 0.983)
+    static let indicator1 = Color(red: 0.908, green: 0.413, blue: 0.413)
 }
 
 struct HomeView: View {
