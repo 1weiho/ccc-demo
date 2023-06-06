@@ -32,11 +32,18 @@ struct HomeView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 28) {
-                    CampusPost()
-                    CampusPost()
-                    CampusPost()
+                    if (selectedTab == 0) {
+                        CampusPost()
+                        CampusPost()
+                        CampusPost()
+                    } else {
+                        Post(likeCount: 10)
+                        Post(likeCount: 23)
+                        Post(likeCount: 5)
+                    }
+                    
                 }
-                .padding(.top)
+                .padding(.vertical)
             }
             
             
@@ -156,6 +163,59 @@ struct CampusPost: View {
         }
     }
 }
+
+struct Post: View {
+    @State private var isLiked = false
+    @State private var likeCount: Int
+    
+    init(likeCount: Int) {
+        self.likeCount = likeCount
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack(alignment: .center) {
+                Image("avatar")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+                Text("陳小春")
+                    .font(.title3)
+                    .kerning(2)
+            }
+            .padding(.bottom, 8)
+            
+            Text("最佳露營目的地分享！")
+                .font(.title2)
+                .bold()
+                .kerning(4)
+                .padding(.bottom, 8)
+            
+            Text("嗨，露營愛好者們！我們來到了一年一度的露營季節，這是我最期待的時刻之一。今天我們要來分享一些最佳露營目的地，讓你們可以探索大自然...")
+                .font(.body)
+                .foregroundColor(.dark)
+                .lineSpacing(6)
+                .kerning(2)
+                .padding(.bottom, 8)
+            
+            HStack {
+                Button(action: {
+                    if isLiked {
+                        likeCount -= 1
+                    } else {
+                        likeCount += 1
+                    }
+                    isLiked.toggle()
+                }) {
+                    Image(systemName: isLiked ? "heart.fill" : "heart").foregroundColor(isLiked ? Color.red : Color.black)
+                }
+                
+                Text("\(likeCount)")
+            }
+        }
+    }
+}
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
