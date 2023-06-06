@@ -47,7 +47,7 @@ struct CreatePostView: View {
                     .background(Color.black)
                     .foregroundColor(.white)
                     .cornerRadius(8)
-            }
+            }.padding(.bottom, 26)
             
             
             
