@@ -18,7 +18,7 @@ struct CampTutorialView: View {
     var body: some View {
         VStack() {
             // Top Area
-            CampTutorialTopAreaView()
+            TopAreaView(title: "露營教學")
             
             // Rest of your content
             CampTutorialSearchBarView(searchText: $searchText)
@@ -39,28 +39,6 @@ struct CampTutorialView: View {
             
             
         }.padding(.top, 20).padding(.horizontal, 32)
-    }
-}
-
-struct CampTutorialTopAreaView: View {
-    var body: some View {
-        HStack {
-            // User Name
-            Text("露營教學")
-                .font(.title)
-                .bold()
-                .kerning(4)
-            
-            
-            Spacer()
-            
-            // User Image
-            Image("avatar")
-                .resizable()
-                .frame(width: 48, height: 48)
-                .clipShape(Circle())
-            
-        }
     }
 }
 
@@ -200,7 +178,8 @@ struct CampTutorialCampusPost: View {
             Text("露營時享受美味的燒烤食物是一種令人愉悅的體驗。漢堡是露營者中常見且受歡迎的選擇之一。本文將分享一個簡單而美味的漢堡烹飪指南...")
                 .foregroundColor(.gray1)
                 .font(.callout)
-                .kerning(1)
+                .kerning(1.5)
+                .lineSpacing(8)
             
             HStack {
                 Image(systemName: "hand.thumbsup")
