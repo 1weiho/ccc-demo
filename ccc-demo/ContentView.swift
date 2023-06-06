@@ -23,7 +23,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            Text("Find Friend")
+            MatchPartnerView()
                 .tabItem {
                     VStack {
                         Image(systemName: "bolt.heart")
